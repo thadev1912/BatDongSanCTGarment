@@ -13,5 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         //
+        'http://localhost/api2/public/user' //This is the url that I dont want Csrf for postman
     ];
 }

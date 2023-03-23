@@ -181,7 +181,8 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
-
+        Laravel\Passport\PassportServiceProvider::class,
+        Brian2694\Toastr\ToastrServiceProvider::class,
         /*
          * Package Service Providers...
          */
@@ -194,8 +195,12 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+        Maatwebsite\Excel\ExcelServiceProvider::class,
+        Barryvdh\DomPDF\ServiceProvider::class, 
+        //Mccarlosen\LaravelMpdf\LaravelMpdfServiceProvider::class 
 
     ],
+
 
     /*
     |--------------------------------------------------------------------------
@@ -209,6 +214,10 @@ return [
     */
 
     'aliases' => Facade::defaultAliases()->merge([
+        'Excel' => Maatwebsite\Excel\Facades\Excel::class,
+        'PDF' => Barryvdh\DomPDF\Facade::class, 
+        'Toastr'  => Brian2694\Toastr\Facades\Toastr::class,
+       // 'PDF' => Mccarlosen\LaravelMpdf\Facades\LaravelMpdf::class
         // 'ExampleClass' => App\Example\ExampleClass::class,
     ])->toArray(),
 
